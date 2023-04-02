@@ -1,4 +1,4 @@
-# ASSIGNMENT: extract the href= vaues from the anchor tags, 
+# ASSIGNMENT: extract the href= values from the anchor tags, 
 # scan for a tag that is in a particular position relative to the first name in the list, 
 # follow that link and repeat the process a number of times and report the last name you find
     # Start at: http://py4e-data.dr-chuck.net/known_by_Banan.html
@@ -16,10 +16,10 @@ ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter URL: ')
 position = int(input('Enter position: '))
-count = int(input('Enter count: '))
-print('Retrieving:', url)
+count = int(input('Enter count: ')) + 1
 
 while count > 0:
+    print('Retrieving:', url)
     html = urllib.request.urlopen(url, context=ctx).read()
     soup = BeautifulSoup(html, 'html.parser')
     lst = []
@@ -28,5 +28,4 @@ while count > 0:
     for tag in tags:
         lst.append(tag.get('href', None))
     url = lst[position - 1]
-    print('Retrieving:', url)
     count -= 1
