@@ -24,7 +24,6 @@ soup = BeautifulSoup(html, 'html.parser')
 # <tr><td>Modu</td><td><span class="comments">90</span></td></tr>
 tags = soup('span')
 for tag in tags:
-    # Look at the parts of a tag
+    # Pull out contents of span tag
     print('TAG:', tag)
-    print('Contents:', tag.contents[0])
-    print('Attrs:', tag.attrs)
+    content = tag.contents[0]
