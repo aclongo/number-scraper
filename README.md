@@ -1,2 +1,2 @@
-# number-scraper
-This is my solution for the Scraping Numbers from HTML using BeautifulSoup assignment from Chapter 12 of Python for Everybody on Coursera
+# python-web-data
+This is my solution for scraping numbers and following links in HTML using BeautifulSoup, Chapter 12 assignments of Python for Everybody on Coursera
