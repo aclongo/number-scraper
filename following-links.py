@@ -27,5 +27,6 @@ while count > 0:
     tags = soup('a')
     for tag in tags:
         lst.append(tag.get('href', None))
-
+    url = lst[position - 1]
+    print('Retrieving: ', url)
     count -= 1
