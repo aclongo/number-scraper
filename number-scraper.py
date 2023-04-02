@@ -22,8 +22,18 @@ soup = BeautifulSoup(html, 'html.parser')
 # and pull out the text content of the span tag, 
 # convert them to integers and add them up
 # <tr><td>Modu</td><td><span class="comments">90</span></td></tr>
+
+# Initialize a sum total variable
+sum = 0
 tags = soup('span')
 for tag in tags:
     # Pull out contents of span tag
     print('TAG:', tag)
+    # Save the text content of each span tag in a variable
     content = tag.contents[0]
+    print('NUMBER OF COMMENTS:', content)
+    # Convert the text content to an integer and add to the total
+    sum += int(content)
+    print('RUNNING TOTAL:', sum)
+
+print(f'FINAL: There were a total of {sum} comments on the webpage url {url}.')
