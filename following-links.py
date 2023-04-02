@@ -17,7 +17,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter URL: ')
 position = input('Enter position: ')
-count = input('Enter count: ')
+count = int(input('Enter count: '))
 
 while count > 0:
     html = urllib.request.urlopen(url, context=ctx).read()
