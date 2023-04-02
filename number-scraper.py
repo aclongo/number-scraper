@@ -19,14 +19,12 @@ html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
 # You are to find all the <span> tags in the file 
-# and pull out the numbers from the tag and sum the numbers.
-# SAMPLE CODE: adjust this code to look for span tags 
 # and pull out the text content of the span tag, 
 # convert them to integers and add them up
-tags = soup('a')
+# <tr><td>Modu</td><td><span class="comments">90</span></td></tr>
+tags = soup('span')
 for tag in tags:
     # Look at the parts of a tag
     print('TAG:', tag)
-    print('URL:', tag.get('href', None))
     print('Contents:', tag.contents[0])
     print('Attrs:', tag.attrs)
