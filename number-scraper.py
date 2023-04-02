@@ -25,8 +25,8 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # Initialize a sum total variable
 sum = 0
-tags = soup('span')
-for tag in tags:
+span_tags = soup('span')
+for tag in span_tags:
     # Pull out contents of span tag
     print('TAG:', tag)
     # Save the text content of each span tag in a variable
@@ -36,4 +36,4 @@ for tag in tags:
     sum += int(content)
     print('RUNNING TOTAL:', sum)
 
-print(f'FINAL: There were a total of {sum} comments on the webpage url {url}.')
+print(f'\nFINAL: There were a total of {sum} comments on the webpage url {url}.')
