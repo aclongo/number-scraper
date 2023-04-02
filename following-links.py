@@ -16,7 +16,7 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter URL: ')
-position = input('Enter position: ')
+position = int(input('Enter position: '))
 count = int(input('Enter count: '))
 
 while count > 0:
