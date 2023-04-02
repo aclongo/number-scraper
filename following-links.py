@@ -18,6 +18,7 @@ ctx.verify_mode = ssl.CERT_NONE
 url = input('Enter URL: ')
 position = int(input('Enter position: '))
 count = int(input('Enter count: '))
+print('Retrieving:', url)
 
 while count > 0:
     html = urllib.request.urlopen(url, context=ctx).read()
@@ -28,5 +29,5 @@ while count > 0:
     for tag in tags:
         lst.append(tag.get('href', None))
     url = lst[position - 1]
-    print('Retrieving: ', url)
+    print('Retrieving:', url)
     count -= 1
